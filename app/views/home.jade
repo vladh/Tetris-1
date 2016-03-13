@@ -1,0 +1,40 @@
+extends /layout
+
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/home.css')
+
+block content
+  h1.play Tetris
+  #hacky-font-loader Hi, I'm a hack.
+  .container
+    .row
+      .col-md-2
+      .col-md-2
+        h1.holdText Hold
+        canvas#holdCanvas
+        p.linesCleared Lines: #[span#lines]
+        div#startTetrisButton
+          button.btn.btn-default(type="button") Play again
+        p#github #[a(href='https://github.com/claudiaii/Tetris', target='_blank') Check out the source code here]
+      .col-md-4
+        canvas#tetrisCanvas
+      .col-md-2
+        h1.nextText Next
+        canvas#nextCanvas
+        div.howToPlay
+          h1 How To Play
+          ul
+            li Hold: c
+            li Rotate: &#8593;
+            li Move right: &#8594;
+            li Move left: &#8592;
+            li Hard drop: space
+            li Pause: esc
+
+      .col-md-2
+
+block scripts
+  script(src='/javascripts/Helpers.js')
+  script(src='/javascripts/Tetrimino.js')
+  script(src='/javascripts/Game.js')
+  script(src='/javascripts/engine.js')
