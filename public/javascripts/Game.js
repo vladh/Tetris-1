@@ -652,7 +652,7 @@ Game = (function() {
     return this.addToShadowGrid(tetrimino, this.shadowGridY - 1);
   };
 
-  Game.prototype.keyboardInput = function() {
+  Game.prototype.keyboardInput = function(event) {
     var keyCodes, ref;
     keyCodes = {
       ESC: 27,

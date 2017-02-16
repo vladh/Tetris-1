@@ -441,7 +441,7 @@ class Game
 
     @addToShadowGrid(tetrimino, @shadowGridY - 1)
 
-  keyboardInput: ->
+  keyboardInput: (event) ->
     keyCodes = {
       ESC: 27
       SPACE: 32
